@@ -1,24 +1,12 @@
-# README
+# Check Apartment Gem
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Multi Tenant
 
-Things you may want to cover:
+くわしくはReferenceをみるべし。
 
-* Ruby version
+## Reference
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- influitive/apartment
+  - <https://github.com/influitive/apartment>
+- Apartment でマルチテナントサービスを作成する
+  - <https://qiita.com/kakipo/items/a584d24771dff019d3a9>
