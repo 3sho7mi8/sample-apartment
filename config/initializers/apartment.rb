@@ -13,6 +13,9 @@ require 'apartment/elevators/subdomain'
 #
 Apartment.configure do |config|
 
+  config.excluded_models = %w{Tenant User}
+  config.tenant_names = lambda { Tenant.all.map(&:namt) }
+  config.seed_after_create = true unless Rails.env.test?
   # Add any models that you do not want to be multi-tenanted, but remain in the global (public) namespace.
   # A typical example would be a Customer or Tenant model that stores each Tenant's information.
   #
@@ -48,7 +51,7 @@ Apartment.configure do |config|
   #   end
   # end
   #
-  config.tenant_names = lambda { ToDo_Tenant_Or_User_Model.pluck :database }
+  # config.tenant_names = lambda { ToDo_Tenant_Or_User_Model.pluck :database }
 
   # PostgreSQL:
   #   Specifies whether to use PostgreSQL schemas or create a new database per Tenant.
